@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Brand Design System: doc/05-design-system.md */
+    /* Background: Warm off-white (#FAF8F5) */
+    --background: 36 33% 97%;
+    /* Foreground / Text: Near-black (#1C1917) */
+    --foreground: 24 10% 10%;
+
+    /* Surface (cards): White (#FFFFFF) */
+    --card: 0 0% 100%;
+    --card-foreground: 24 10% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 24 10% 10%;
+
+    /* Primary: Deep teal (#0F766E) */
+    --primary: 175 77% 26%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 176 69% 22%;
+
+    /* Secondary / Neutral button / surface */
+    --secondary: 30 6% 92%;
+    --secondary-foreground: 24 10% 10%;
+
+    /* Muted: Gray text (#57534E) & light background */
+    --muted: 36 20% 94%;
+    --muted-foreground: 25 5% 35%;
+
+    /* Accent: Warm amber (#D97706) for "pending" */
+    --accent: 38 92% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Danger / overdue: Red (#B91C1C) */
+    --destructive: 0 74% 42%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Success: Green (#15803D) */
+    --success: 142 72% 29%;
+    --success-foreground: 0 0% 100%;
+
+    /* Warning */
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    /* Border: Light gray (#E7E5E4) */
+    --border: 30 6% 90%;
+    --input: 30 6% 90%;
+    --ring: 175 77% 26%;
+
+    /* Corner radius: 8px */
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings:
+      "rlig" 1,
+      "calt" 1;
+  }
+  /* Tabular numbers for all financial & numerical data */
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
